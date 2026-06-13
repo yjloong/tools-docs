@@ -14,3 +14,4 @@ nav:
   - Git: git/index.md
   - 数据库: database/index.md
   - CI/CD: cicd/index.md
+  - 会话摘要: clerk/index.md
