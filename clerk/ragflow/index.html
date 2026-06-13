@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ragflow" class="md-skip">
+        <a href="#ragflow-gpu" class="md-skip">
           Skip to content
         </a>
       
@@ -556,10 +556,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#core-work" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Core Work
+        架构
       
     </span>
   </a>
@@ -567,10 +567,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#supporting-work" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Supporting Work
+        前置条件
       
     </span>
   </a>
@@ -578,10 +578,104 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-decisions-rationale" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Decisions &amp; Rationale
+        步骤
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="步骤">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 构建自定义镜像（开发机，有网络）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 验证镜像
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 导出更新包
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 传输到目标机
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 目标机首次部署（全量包）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-ragflow-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 目标机更新（仅 ragflow-server 变更）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-webui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 配置模型（WebUI）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-compose-gpuyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        docker-compose-gpu.yml 关键修正
       
     </span>
   </a>
@@ -589,21 +683,104 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-notes" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User Notes
+        踩坑
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="踩坑">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-onnx-runtime-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ONNX Runtime GPU 不可用
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#version-log" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-tiktoken" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Version Log
+        2. tiktoken 离线环境加载失败
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-mysql-mysql_userroot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. MySQL MYSQL_USER=root 启动失败
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-minio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. MinIO 凭据不匹配
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-redis-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Redis AUTH 报错
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-nginx-webui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Nginx 返回默认页，非 WebUI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-dockerfile-pip-command-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Dockerfile 构建时 pip: command not found
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        版本记录
       
     </span>
   </a>
@@ -681,10 +858,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#core-work" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Core Work
+        架构
       
     </span>
   </a>
@@ -692,10 +869,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#supporting-work" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Supporting Work
+        前置条件
       
     </span>
   </a>
@@ -703,10 +880,104 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-decisions-rationale" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Decisions &amp; Rationale
+        步骤
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="步骤">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 构建自定义镜像（开发机，有网络）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 验证镜像
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 导出更新包
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 传输到目标机
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 目标机首次部署（全量包）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-ragflow-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 目标机更新（仅 ragflow-server 变更）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-webui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 配置模型（WebUI）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-compose-gpuyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        docker-compose-gpu.yml 关键修正
       
     </span>
   </a>
@@ -714,21 +985,104 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-notes" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User Notes
+        踩坑
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="踩坑">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-onnx-runtime-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ONNX Runtime GPU 不可用
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#version-log" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-tiktoken" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Version Log
+        2. tiktoken 离线环境加载失败
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-mysql-mysql_userroot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. MySQL MYSQL_USER=root 启动失败
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-minio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. MinIO 凭据不匹配
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-redis-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Redis AUTH 报错
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-nginx-webui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Nginx 返回默认页，非 WebUI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-dockerfile-pip-command-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Dockerfile 构建时 pip: command not found
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        版本记录
       
     </span>
   </a>
@@ -752,61 +1106,210 @@
 
 
 
-<h1 id="ragflow">ragflow</h1>
+<h1 id="ragflow-gpu">RAGFlow GPU 离线部署</h1>
 <blockquote>
-<p>Last updated: 17:24:26</p>
+<p>原因：目标机 H800 + CUDA 13.0，需 GPU 加速文档解析（DeepDoc/ONNX）+ 接入已有 Ollama 推理
+方案：自定义 Docker 镜像（PyTorch cu130 + ONNX Runtime CUDA 13 + tiktoken 离线），本机构建打包传输，不在目标机编译
+环境：Ubuntu 22.04 | RAGFlow v0.25.5 | CUDA 13.0 | Docker 29.1+ | 2026-06-13</p>
 </blockquote>
-<h3 id="core-work">Core Work</h3>
-<p><strong>RAGFlow GPU 离线部署方案（NVIDIA H800 + CUDA 13.0）</strong></p>
+<h2 id="_1">架构</h2>
+<pre><code>目标机 gwgpu001 (H800 80GB, CUDA 13.0)
+┌─────────────────────────────────────────────┐
+│  RAGFlow (Docker)          Ollama (宿主机)    │
+│  ragflow-server            端口 11434         │
+│  ├─ DeepDoc OCR → GPU      ├─ Chat LLM       │
+│  ├─ API Server :9380        └─ Embedding     │
+│  └─ Nginx :80 → WebUI                        │
+│                                               │
+│  MySQL :5455 | ES :1200 | Redis | MinIO      │
+└─────────────────────────────────────────────┘
+</code></pre>
+<h2 id="_2">前置条件</h2>
+<p>目标机：
+- Docker &gt;= 24.0、NVIDIA Container Toolkit 已安装并配置
+- <code>vm.max_map_count &gt;= 262144</code></p>
+<p>验证：</p>
+<pre><code class="language-bash">nvidia-smi
+docker run --rm --gpus all nvidia/cuda:12.6.3-base-ubuntu24.04 nvidia-smi
+sysctl vm.max_map_count
+</code></pre>
+<h2 id="_3">步骤</h2>
+<h3 id="1">1. 构建自定义镜像（开发机，有网络）</h3>
+<pre><code class="language-bash">cd /home/ailab/ragflow
+docker build --no-cache -t ragflow-server:v0.25.5-cu130 -f Dockerfile.cuda13-custom .
+</code></pre>
+<p>关键文件 <code>Dockerfile.cuda13-custom</code>：</p>
+<pre><code class="language-dockerfile">FROM infiniflow/ragflow:v0.25.5
+
+# 卸载 CUDA 12 包
+RUN uv pip uninstall -y torch torchvision torchaudio onnxruntime-gpu onnxruntime 2&gt;/dev/null || true
+
+# PyTorch CUDA 13 (nightly)
+RUN uv pip install --pre torch torchvision torchaudio \
+    --index-url https://download.pytorch.org/whl/nightly/cu130
+
+# ONNX Runtime CUDA 13（必须 force-reinstall，否则 uv 跳过）
+RUN uv pip install --force-reinstall --pre --index-url \
+    https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/ort-cuda-13-nightly/pypi/simple/ \
+    onnxruntime-gpu
+
+# tiktoken 离线修复
+COPY tiktoken-cache /tmp/data-gym-cache
+COPY tiktoken_preload.py /tmp/tiktoken_preload.py
+RUN python3 /tmp/tiktoken_preload.py
+
+ENV DEVICE=gpu
+</code></pre>
+<h3 id="2">2. 验证镜像</h3>
+<pre><code class="language-bash">docker run --rm --entrypoint bash ragflow-server:v0.25.5-cu130 -c &quot;
+python3 -c 'import torch; print(torch.__version__)'
+python3 -c 'import onnxruntime as ort; print(ort.__version__, ort.get_available_providers())'
+python3 -c 'import tiktoken; enc = tiktoken.get_encoding(\&quot;cl100k_base\&quot;); print(enc.name)'
+ldd /ragflow/.venv/lib/python3.13/site-packages/onnxruntime/capi/onnxruntime_providers_cuda.so | grep 'not found' || echo 'OK'
+&quot;
+</code></pre>
+<p>期望输出：<code>CUDAExecutionProvider</code>、<code>cl100k_base</code>、<code>OK: no missing libs</code></p>
+<h3 id="3">3. 导出更新包</h3>
+<pre><code class="language-bash">mkdir -p ~/ragflow-update-$(date +%Y%m%d)/images
+docker save -o ~/ragflow-update-$(date +%Y%m%d)/images/ragflow-server_v0.25.5-cu130.tar ragflow-server:v0.25.5-cu130
+cp /home/ailab/ragflow/docker/docker-compose-gpu.yml ~/ragflow-update-$(date +%Y%m%d)/
+cp /home/ailab/ragflow/docker/.env.gpu ~/ragflow-update-$(date +%Y%m%d)/
+cd ~ &amp;&amp; tar -czf ragflow-update-$(date +%Y%m%d).tar.gz ragflow-update-$(date +%Y%m%d)
+</code></pre>
+<h3 id="4">4. 传输到目标机</h3>
+<pre><code class="language-bash">scp ~/ragflow-update-*.tar.gz yangjl@gwgpu001:~/
+</code></pre>
+<h3 id="5">5. 目标机首次部署（全量包）</h3>
+<pre><code class="language-bash">tar -xzf ~/ragflow-offline-*.tar.gz -C ~/ragflow/
+cd ~/ragflow/ragflow-offline-*
+bash deploy-offline.sh
+</code></pre>
+<h3 id="6-ragflow-server">6. 目标机更新（仅 ragflow-server 变更）</h3>
+<pre><code class="language-bash">cd ~/ragflow/ragflow-offline-*
+docker compose -f docker-compose-gpu.yml down
+tar -xzf ~/ragflow-update-*.tar.gz -C ~/ragflow/ --strip-components=1
+docker load -i ~/ragflow/images/ragflow-server_v0.25.5-cu130.tar
+docker compose -f docker-compose-gpu.yml up -d
+</code></pre>
+<h3 id="7-webui">7. 配置模型（WebUI）</h3>
+<p>浏览器打开 <code>http://&lt;目标机IP&gt;:8088</code>：</p>
 <ul>
-<li>从零调研 RAGFlow GPU 部署，确定架构：RAGFlow 容器用 GPU 做文档解析（DeepDoc/ONNX），推理通过 Ollama API 接入</li>
-<li>发现 CUDA 13.0 兼容性问题：PyTorch 稳定版不支持，ONNX Runtime 需从微软 nightly 源安装，且必须 <code>--force-reinstall</code>（uv 检测已安装的 <code>onnxruntime-gpu</code> CUDA 12 版本会跳过替换）</li>
-<li>构建自定义镜像 <code>ragflow-server:v0.25.5-cu130</code>，包含：</li>
-<li>PyTorch 2.12.0+cu130 (nightly)</li>
-<li>ONNX Runtime 1.26.0 + CUDAExecutionProvider</li>
-<li>tiktoken offline fix（patch <code>load.py</code> 禁止联网，预置 <code>cl100k_base</code> 缓存）</li>
-<li>cuDNN 9 / CUDA Toolkit 13 运行时库</li>
-<li>踩坑：<code>onnxruntime-gpu-cuda13</code> 在 PyPI 上不存在（包名仍是 <code>onnxruntime-gpu</code>）</li>
-<li>生成离线部署包 <code>~/ragflow-update-20260613.tar.gz</code> (6.3 GB)，含镜像 + compose 配置</li>
+<li>设置 → 模型提供商 → 添加 Ollama</li>
+<li>Base URL: <code>http://host.docker.internal:11434</code></li>
+<li>Chat 模型: 已有的 Ollama chat 模型名</li>
+<li>Embedding 模型: <code>bge-m3</code></li>
 </ul>
-<h3 id="supporting-work">Supporting Work</h3>
+<h2 id="docker-compose-gpuyml">docker-compose-gpu.yml 关键修正</h2>
+<pre><code class="language-yaml"># MySQL: 不能设 MYSQL_USER=root（与内置 root 冲突）
+mysql:
+  environment:
+    MYSQL_ROOT_PASSWORD: infini_rag_flow
+    MYSQL_DATABASE: rag_flow
+    # 不要加 MYSQL_USER / MYSQL_PASSWORD
+
+# Redis: 需要密码，否则 AUTH 报错
+redis:
+  command: redis-server --requirepass infini_rag_flow
+
+# MinIO: 凭据必须与 RAGFlow service_conf.yaml 一致
+minio:
+  environment:
+    MINIO_ROOT_USER: rag_flow
+    MINIO_ROOT_PASSWORD: infini_rag_flow
+
+# RAGFlow: GPU device reservation
+ragflow-server:
+  deploy:
+    resources:
+      reservations:
+        devices:
+          - driver: nvidia
+            count: all
+            capabilities: [gpu]
+  environment:
+    - DEVICE=gpu
+    - REDIS_PASSWORD=infini_rag_flow
+</code></pre>
+<h2 id="_4">踩坑</h2>
+<h3 id="1-onnx-runtime-gpu">1. ONNX Runtime GPU 不可用</h3>
 <ul>
-<li>修正 <code>docker-compose-gpu.yml</code> 中 MySQL <code>MYSQL_USER=root</code> 错误（不能与内置 root 重名）</li>
-<li>修正 MinIO 凭据对齐（compose <code>ragflow</code>/<code>ragflow123</code> vs RAGFlow 期望 <code>rag_flow</code>/<code>infini_rag_flow</code>）</li>
-<li>Redis 添加密码 <code>infini_rag_flow</code> 解决 AUTH 错误</li>
-<li>修正 nginx 配置缺失（v0.23.1 bug，切换到 v0.25.5）</li>
-<li>宿主机 nginx 端口冲突处理（改 RAGFlow 到 8088）</li>
+<li><strong>现象</strong>：<code>libcublasLt.so.12: cannot open shared object file</code> → 回退 CPU</li>
+<li><strong>原因</strong>：PyPI 上 <code>onnxruntime-gpu</code> 链接的是 CUDA 12 的 <code>libcublasLt.so.12</code>，CUDA 13 系统只有 <code>.so.13</code>。包名 <code>onnxruntime-gpu-cuda13</code> 在 PyPI 上不存在</li>
+<li><strong>解决</strong>：从微软 nightly 源安装，必须 <code>--force-reinstall</code>，否则 uv 认为已安装 CUDA 12 版本而跳过</li>
 </ul>
-<h3 id="key-decisions-rationale">Key Decisions &amp; Rationale</h3>
+<pre><code class="language-bash">uv pip install --force-reinstall --pre --index-url \
+  https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/ort-cuda-13-nightly/pypi/simple/ \
+  onnxruntime-gpu
+</code></pre>
+<h3 id="2-tiktoken">2. tiktoken 离线环境加载失败</h3>
 <ul>
-<li><strong>选 v0.25.5 而非 v0.23.1</strong>：v0.23.1 缺少 nginx 配置 + pip 被 uv 替代导致 Dockerfile 构建失败</li>
-<li><strong>tiktoken patch 打进镜像而非 volume mount</strong>：离线环境无法联网下载编码文件，commit 进镜像一劳永逸</li>
-<li><strong>ONNX Runtime CUDA 13 必须 <code>--force-reinstall</code></strong>：uv 检测到已安装的 CUDA 12 版本会跳过，导致 GPU 不可用</li>
-<li><strong>不在目标机上重建镜像</strong>：目标机完全离线且无 Docker 构建环境，所有镜像在本机构建后打包传输</li>
-<li><strong>MinIO 卷删除后重建</strong>：<code>MINIO_ROOT_USER/PASSWORD</code> 仅在首次创建时生效</li>
+<li><strong>现象</strong>：<code>Failed to resolve 'openaipublic.blob.core.windows.net'</code> → 启动报错</li>
+<li><strong>原因</strong>：<code>tiktoken.get_encoding("cl100k_base")</code> 首次调用时联网下载 BPE 编码文件</li>
+<li><strong>解决</strong>：预下载缓存文件到 <code>/tmp/data-gym-cache/&lt;sha1-of-url&gt;</code>，patch <code>load.py</code> 中 <code>read_file()</code> 的 HTTP 分支改为读本地缓存、<code>check_hash()</code> 跳过校验</li>
 </ul>
-<h3 id="user-notes">User Notes</h3>
+<h3 id="3-mysql-mysql_userroot">3. MySQL <code>MYSQL_USER=root</code> 启动失败</h3>
 <ul>
-<li>用户有开发机（无 GPU）和目标机 <code>gwgpu001</code>（H800 80GB, CUDA 13.0, Docker 29.1.1, nvidia-ctk 已安装）</li>
-<li>目标机已有 Ollama + vLLM 服务，显存占用 ~79GB，剩余 ~92GB</li>
-<li>目标机完全离线，所有镜像和依赖需提前打包</li>
+<li><strong>现象</strong>：<code>MYSQL_USER="root", MYSQL_USER and MYSQL_PASSWORD are for configuring a regular user and cannot be used for the root user</code></li>
+<li><strong>原因</strong>：MySQL 官方镜像规定 <code>MYSQL_USER</code> 只能创建普通用户，不能设为 root</li>
+<li><strong>解决</strong>：删除 <code>MYSQL_USER</code>/<code>MYSQL_PASSWORD</code>，只保留 <code>MYSQL_ROOT_PASSWORD</code></li>
 </ul>
-<h3 id="version-log">Version Log</h3>
-<ol>
-<li>初始调研 — RAGFlow GPU 部署方案文档</li>
-<li>v0.23.1 — 首次部署（废弃：nginx 配置缺失 + pip 不存在）</li>
-<li>v0.25.5 — 切换版本，修正 MySQL/Redis/MinIO/tiktoken</li>
-<li>v0.25.5-cu130 (ONNX RT 1.26.0 + tiktoken fix) — 最终可用镜像</li>
-</ol>
+<h3 id="4-minio">4. MinIO 凭据不匹配</h3>
+<ul>
+<li><strong>现象</strong>：<code>InvalidAccessKeyId: The Access Key Id you provided does not exist in our records</code></li>
+<li><strong>原因</strong>：<code>docker-compose-gpu.yml</code> 写的是 <code>ragflow</code>/<code>ragflow123</code>，但 RAGFlow 的 <code>service_conf.yaml</code> 期望 <code>rag_flow</code>/<code>infini_rag_flow</code></li>
+<li><strong>解决</strong>：对齐 compose 文件中的 <code>MINIO_ROOT_USER</code>/<code>MINIO_ROOT_PASSWORD</code></li>
+</ul>
+<h3 id="5-redis-auth">5. Redis AUTH 报错</h3>
+<ul>
+<li><strong>现象</strong>：<code>valkey.exceptions.AuthenticationError: AUTH &lt;password&gt; called without any password configured</code></li>
+<li><strong>原因</strong>：RAGFlow 使用的 valkey 客户端默认尝试 AUTH，但 Redis 容器没有设置密码</li>
+<li><strong>解决</strong>：<code>redis-server --requirepass infini_rag_flow</code>，RAGFlow 侧传 <code>REDIS_PASSWORD</code></li>
+</ul>
+<h3 id="6-nginx-webui">6. Nginx 返回默认页，非 WebUI</h3>
+<ul>
+<li><strong>现象</strong>：浏览器看到 <code>Welcome to nginx!</code> 而非 RAGFlow 登录页</li>
+<li><strong>原因</strong>：v0.23.1 镜像缺少 RAGFlow 的 nginx 配置（<code>/etc/nginx/conf.d/ragflow.conf.python</code>）；宿主机 nginx 占用了 80 端口</li>
+<li><strong>解决</strong>：切换到 v0.25.5（自带完整 nginx 配置）；改 <code>NGINX_HTTP_PORT=8088</code> 避开宿主机端口冲突</li>
+</ul>
+<h3 id="7-dockerfile-pip-command-not-found">7. Dockerfile 构建时 <code>pip: command not found</code></h3>
+<ul>
+<li><strong>现象</strong>：<code>/bin/bash: line 1: pip: command not found</code></li>
+<li><strong>原因</strong>：RAGFlow v0.23.1+ 镜像用 <code>uv</code> 替代了 <code>pip</code></li>
+<li><strong>解决</strong>：所有 <code>pip</code> 命令改为 <code>uv pip</code></li>
+</ul>
+<h2 id="_5">版本记录</h2>
+<table>
+<thead>
+<tr>
+<th>日期</th>
+<th>镜像</th>
+<th>变更</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-06-12</td>
+<td><code>v0.23.1-cu130</code></td>
+<td>首次构建（废弃：nginx 缺失）</td>
+</tr>
+<tr>
+<td>2026-06-12</td>
+<td><code>v0.25.5-cu130</code> (ONNX RT 1.23.2)</td>
+<td>切换版本，修正 MySQL/Redis/MinIO</td>
+</tr>
+<tr>
+<td>2026-06-13</td>
+<td><code>v0.25.5-cu130</code> (ONNX RT 1.26.0 + tiktoken)</td>
+<td>修正 ONNX RT 安装方式 + tiktoken patch</td>
+</tr>
+</tbody>
+</table>
 
 
 
 
 
 
-
-  
-  
 
 
 
