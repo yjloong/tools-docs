@@ -5,9 +5,17 @@
 > 原因：搭建容器化开发环境，部分项目需要离线运行 Docker
 > 方案：安装 Docker CE 并配置免 sudo、离线镜像同步
 
-> 环境：Ubuntu 22.04 | Docker 26.1.3 | 2024-06-10
+> 环境：Ubuntu 22.04 | 2024-06-10
 
-### 步骤
+## 版本
+
+| 组件 | 版本 | 备注 |
+|------|------|------|
+| Docker CE | 26.1.3 | 官方 apt 源 |
+| containerd.io | 1.6.32 | Docker 依赖 |
+| docker-compose-plugin | 2.27.1 | Docker Compose V2 |
+
+## 步骤
 
 ```bash
 # 卸载旧版本
