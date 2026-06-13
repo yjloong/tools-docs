@@ -8,6 +8,7 @@ theme:
     - content.code.copy
 nav:
   - 首页: index.md
+  - 编写指南: guide.md
   - Docker: docker/index.md
   - Kubernetes: kubernetes/index.md
   - Python: python/index.md
