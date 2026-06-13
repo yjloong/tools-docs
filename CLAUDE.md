@@ -1,58 +1,52 @@
-# CLAUDE.md — 工具安装文档
+# CLAUDE.md — 技能库
 
-基于 **MkDocs + Material 主题**的工具安装文档仓库。记录各工具的安装方法、踩坑记录和对应版本。
+基于 **MkDocs + Material 主题**的个人技能库，定位类似 Claude Code skill：
+每篇文档对应一个具体**问题场景**或**工具安装方案**，可复现、可独立使用。
 
 ## 项目结构
 
 ```
 tools-docs/
 ├── mkdocs.yml              # MkDocs 配置
-├── docs/                   # 所有 markdown 文档
-│   ├── index.md            # 首页（也是 README.md）
-│   ├── docker/
-│   │   └── index.md
-│   ├── kubernetes/
-│   │   └── index.md
-│   └── python/
-│       └── index.md
+├── docs/                   # 所有文档
+│   ├── index.md            # 站点首页
+│   ├── template.md         # 文档模板
+│   └── <分类>/index.md     # 分类文档
 └── CLAUDE.md
 ```
 
-## 添加新工具文档
+## 文档编写原则
 
-1. 在 `docs/<分类>/` 下创建目录和 `index.md`
-2. 在 `mkdocs.yml` 的 `nav` 中注册
-3. 文档使用统一模板（见下文）
+- **单篇自洽**：每篇不依赖其它文档，独立可用
+- **问题驱动**：标题是问题或场景，而非工具名
+- **信息密集**：环境 + 命令 + 坑 + 链接，没有废话
+- **版本锚定**：每条记录标上版本号，方便回溯
 
 ## 文档模板
 
-每个工具文档遵循固定结构：
-
 ```markdown
-# <工具名> 安装记录
+# <问题 / 场景标题>
 
-> 环境：<OS 版本> | <工具版本> | <日期>
+> 环境：<OS> | <工具名> <版本号> | <YYYY-MM-DD>
 
-## 安装步骤
-\```bash
-# 安装命令
-\```
+## 场景
+
+## 解决步骤
 
 ## 踩坑
 
-### 1. <问题标题>
-- **现象**：<错误信息或表现>
-- **原因**：<根本原因>
-- **解决**：<具体解决步骤>
-
 ## 参考链接
-- [xxx](url)
 ```
 
-## MkDocs 命令
+## 添加新文档
+
+1. 在 `docs/<分类>/` 下编辑对应 `index.md`
+2. 若新增分类，在 `mkdocs.yml` 的 `nav` 中注册
+3. 部署：`mkdocs gh-deploy`
+
+## 常用命令
 
 ```bash
-mkdocs serve     # 本地预览 http://localhost:8000
-mkdocs build     # 构建静态站点
+mkdocs serve     # 本地预览
 mkdocs gh-deploy # 部署到 GitHub Pages
 ```

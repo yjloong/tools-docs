@@ -1,5 +1,5 @@
-site_name: 工具安装文档
-site_description: 记录各工具的安装方法、踩坑和经验
+site_name: 技能库
+site_description: 面向问题方案和工具安装的个人技能库
 theme:
   name: material
   features:
