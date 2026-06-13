@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="记录各工具的安装方法、踩坑和经验">
+        <meta name="description" content="面向问题方案和工具安装的个人技能库">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>工具安装文档</title>
+        <title>技能库</title>
       
     
     
@@ -80,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="工具安装文档" class="md-header__button md-logo" aria-label="工具安装文档" data-md-component="logo">
+    <a href="." title="技能库" class="md-header__button md-logo" aria-label="技能库" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -94,7 +94,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            工具安装文档
+            技能库
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -178,13 +178,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="工具安装文档" class="md-nav__button md-logo" aria-label="工具安装文档" data-md-component="logo">
+    <a href="." title="技能库" class="md-nav__button md-logo" aria-label="技能库" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    工具安装文档
+    技能库
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -259,7 +259,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        快速定位
+        分类索引
       
     </span>
   </a>
@@ -270,7 +270,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        约定
+        文档格式
       
     </span>
   </a>
@@ -477,7 +477,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        快速定位
+        分类索引
       
     </span>
   </a>
@@ -488,7 +488,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        约定
+        文档格式
       
     </span>
   </a>
@@ -512,19 +512,46 @@
 
 
 
-<h1 id="_1">工具安装文档</h1>
-<p>记录各工具在不同环境下的安装方法、踩坑记录和对应版本号。</p>
-<h2 id="_2">快速定位</h2>
-<ul>
-<li>🐳 <a href="docker/">Docker</a></li>
-<li>☸️ <a href="kubernetes/">Kubernetes</a></li>
-<li>🐍 <a href="python/">Python</a></li>
-<li>🔧 <a href="git/">Git</a></li>
-<li>🗄️ <a href="database/">数据库</a></li>
-<li>🚀 <a href="cicd/">CI/CD</a></li>
-</ul>
-<h2 id="_3">约定</h2>
-<p>每篇安装记录固定包含：<strong>环境信息 → 安装步骤 → 踩坑记录 → 参考链接</strong>。</p>
+<h1 id="_1">技能库</h1>
+<p>面向<strong>问题方案</strong>和<strong>工具安装</strong>的个人技能库。</p>
+<p>每篇文档一种场景 — 不用通读，遇到问题直接跳到对应分类。开箱即用。</p>
+<h2 id="_2">分类索引</h2>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>典型问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🐳 <a href="docker/">Docker</a></td>
+<td>安装失败 · GPU 容器 · 权限问题</td>
+</tr>
+<tr>
+<td>☸️ <a href="kubernetes/">Kubernetes</a></td>
+<td>集群初始化 · 网络插件 · Pod 排错</td>
+</tr>
+<tr>
+<td>🐍 <a href="python/">Python</a></td>
+<td>版本切换 · Poetry 冲突 · 编译报错</td>
+</tr>
+<tr>
+<td>🔧 <a href="git/">Git</a></td>
+<td>SSH 配置 · 冲突解决 · 日志回溯</td>
+</tr>
+<tr>
+<td>🗄️ <a href="database/">数据库</a></td>
+<td>安装 · 连接配置 · 备份恢复</td>
+</tr>
+<tr>
+<td>🚀 <a href="cicd/">CI/CD</a></td>
+<td>Workflow 编写 · 部署 · 密钥管理</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">文档格式</h2>
+<p>每篇固定包含：<strong>场景描述 → 环境/版本 → 解决步骤 → 遇过的坑 → 参考链接</strong>。</p>
 
 
 
