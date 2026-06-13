@@ -1,0 +1,16 @@
+site_name: 工具安装文档
+site_description: 记录各工具的安装方法、踩坑和经验
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - search.highlight
+    - content.code.copy
+nav:
+  - 首页: index.md
+  - Docker: docker/index.md
+  - Kubernetes: kubernetes/index.md
+  - Python: python/index.md
+  - Git: git/index.md
+  - 数据库: database/index.md
+  - CI/CD: cicd/index.md
