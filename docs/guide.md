@@ -83,6 +83,44 @@ apt install docker...
 要注意版本兼容性。
 ```
 
+## 文件位置
+
+项目根目录：`/home/ailab/tools_docs`
+
+```
+/home/ailab/tools_docs/
+├── mkdocs.yml              # 导航配置
+└── docs/
+    ├── guide.md            # 本文档
+    ├── template.md         # 模板
+    ├── <分类>/             # 已存在的分类目录
+    │   └── index.md
+    └── <分类>/             # 新建分类目录
+        └── <文件名>.md
+```
+
+### 放置规则
+
+1. **新建文档** → `docs/<分类>/<文件名>.md`
+   - 分类目录不存在则新建
+   - 文件名用英文小写 + 连字符，如 `offline-pip-source.md`
+2. **单篇追加** → 在已有分类的 `index.md` 中追加 `##` 二级标题段落
+3. **新建分类** → 创建 `docs/<新分类>/index.md`，并在 `mkdocs.yml` 的 `nav` 中添加
+
+### 注册导航
+
+新增文档后必须更新 `/home/ailab/tools_docs/mkdocs.yml`：
+
+```yaml
+nav:
+  - 首页: index.md
+  - 已有分类: docker/index.md
+  - 新分类: 新分类/index.md      # 添加这行
+  - 已有分类:
+      - 概览: docker/index.md
+      - 具体文档: docker/xxx.md   # 子文档这样加
+```
+
 ## 分类规则
 
 - 内容涉及搭建离线源 → `pip/apt/docker/npm/...`

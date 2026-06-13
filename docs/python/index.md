@@ -3,7 +3,7 @@
 ## pyenv + Poetry 开发环境搭建 (Ubuntu 22.04)
 
 > 原因：需要多版本 Python 共存，统一包管理，未来可能迁移到离线 pip 源
-> 功能：pyenv 管理 Python 版本，Poetry 管理项目依赖
+> 方案：pyenv 管理 Python 版本，Poetry 管理项目依赖
 
 > 环境：Ubuntu 22.04 | pyenv 2.4.1 | Poetry 1.8.3 | 2024-05-28
 

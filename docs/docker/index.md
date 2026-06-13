@@ -3,7 +3,7 @@
 ## Docker CE 安装 (Ubuntu 22.04)
 
 > 原因：搭建容器化开发环境，部分项目需要离线运行 Docker
-> 功能：安装 Docker CE 并配置免 sudo、离线镜像同步
+> 方案：安装 Docker CE 并配置免 sudo、离线镜像同步
 
 > 环境：Ubuntu 22.04 | Docker 26.1.3 | 2024-06-10
 

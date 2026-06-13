@@ -1,6 +1,6 @@
 # CLAUDE.md — 文档仓库
 
-基于 **MkDocs + Material 主题**的个人技术文档仓库。
+基于 **MkDocs + Material 主题**的个人技术文档仓库。项目路径：`/home/ailab/tools_docs`。
 
 ## 定位
 
