@@ -1,30 +1,18 @@
-# 技能库
+# 文档仓库
 
-面向**问题方案**和**工具安装**的个人技能库，类似 Claude Code 的 skill 机制 —
-每篇文档对应一个具体场景，遇到同类问题直接命中、照做解决。
+个人技术文档仓库，按场景组织。每篇文档主要写给 AI 作为参考指南 —
+人只需要看最前面的**原因**和**功能**，具体步骤和踩坑细节由 AI 参照执行。
 
-## 定位
+## 侧重点
 
-- **问题驱动**：以"遇到什么错误 / 想实现什么"为入口，而非按工具罗列
-- **可复现**：记录环境、版本、命令，不用再翻 GitHub Issue
-- **单篇自洽**：每篇独立可用，不依赖上下文阅读
+- **离线环境**：工具迁移到离线环境、搭建离线源
+- **踩坑记录**：安装/配置过程中遇到的具体问题和解法
+- **环境迁移**：从在线到离线、从 x86 到 arm 等
 
 ## 使用方式
 
 ```bash
 pip install mkdocs-material
-mkdocs serve   # http://localhost:8000
+mkdocs serve    # 本地预览 http://localhost:8000
+mkdocs gh-deploy  # 发布到 GitHub Pages
 ```
-
-## 目录概览
-
-| 分类 | 内容 |
-|------|------|
-| Docker | 安装、GPU 容器、compose 编排 |
-| Python | 版本管理、虚拟环境、包管理器 |
-| Git | SSH 配置、常见报错、worktree 技巧 |
-| Kubernetes | 集群搭建、kubectl、故障排查 |
-| 数据库 | PostgreSQL、Redis 安装与基本配置 |
-| CI/CD | GitHub Actions、部署流水线 |
-
-持续更新中。
