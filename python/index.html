@@ -374,11 +374,21 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="pyenv + Poetry 开发环境搭建 (Ubuntu 22.04)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        版本
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         步骤
@@ -386,10 +396,11 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="步骤">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         踩坑
@@ -428,7 +439,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考链接
@@ -710,11 +721,21 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="pyenv + Poetry 开发环境搭建 (Ubuntu 22.04)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        版本
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         步骤
@@ -722,10 +743,11 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="步骤">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         踩坑
@@ -764,7 +786,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考链接
@@ -801,9 +823,36 @@
 <blockquote>
 <p>原因：需要多版本 Python 共存，统一包管理，未来可能迁移到离线 pip 源
 方案：pyenv 管理 Python 版本，Poetry 管理项目依赖</p>
-<p>环境：Ubuntu 22.04 | pyenv 2.4.1 | Poetry 1.8.3 | 2024-05-28</p>
+<p>环境：Ubuntu 22.04 | 2024-05-28</p>
 </blockquote>
-<h3 id="_1">步骤</h3>
+<h2 id="_1">版本</h2>
+<table>
+<thead>
+<tr>
+<th>组件</th>
+<th>版本</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pyenv</td>
+<td>2.4.1</td>
+<td>curl 安装</td>
+</tr>
+<tr>
+<td>Python</td>
+<td>3.12.3</td>
+<td>pyenv 管理</td>
+</tr>
+<tr>
+<td>Poetry</td>
+<td>1.8.3</td>
+<td>官方安装脚本</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">步骤</h2>
 <pre><code class="language-bash"># pyenv
 curl https://pyenv.run | bash
 
@@ -827,7 +876,7 @@ curl -sSL https://install.python-poetry.org | python3 -
 
 echo 'export PATH=&quot;$HOME/.local/bin:$PATH&quot;' &gt;&gt; ~/.bashrc
 </code></pre>
-<h3 id="_2">踩坑</h3>
+<h3 id="_3">踩坑</h3>
 <h4 id="1-pyenv-install">1. <code>pyenv install</code> 编译失败</h4>
 <ul>
 <li><strong>现象</strong>：<code>BUILD FAILED (Ubuntu 22.04 using python-build ...)</code></li>
@@ -840,7 +889,7 @@ echo 'export PATH=&quot;$HOME/.local/bin:$PATH&quot;' &gt;&gt; ~/.bashrc
 <li><strong>原因</strong>：团队内 Poetry 版本不一致，lock 文件由高版本生成</li>
 <li><strong>解决</strong>：<code>poetry self update</code> 升级到最新，或 <code>poetry lock --no-update</code> 重新生成</li>
 </ul>
-<h3 id="_3">参考链接</h3>
+<h3 id="_4">参考链接</h3>
 <ul>
 <li><a href="https://github.com/pyenv/pyenv">pyenv 官方</a></li>
 <li><a href="https://python-poetry.org/docs/">Poetry 官方</a></li>

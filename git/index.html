@@ -401,11 +401,21 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="常用配置与技巧">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        版本
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         基础配置
@@ -413,7 +423,8 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="基础配置">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#ssh" class="md-nav__link">
@@ -427,7 +438,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         踩坑
@@ -466,7 +477,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考链接
@@ -721,11 +732,21 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="常用配置与技巧">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        版本
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         基础配置
@@ -733,7 +754,8 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="基础配置">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#ssh" class="md-nav__link">
@@ -747,7 +769,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         踩坑
@@ -786,7 +808,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考链接
@@ -823,9 +845,31 @@
 <blockquote>
 <p>原因：多环境多账号 Git 操作经常遇到认证和配置问题
 方案：统一 Git 基础配置、SSH 密钥管理、常见报错修复</p>
-<p>环境：Ubuntu 22.04 | Git 2.43.0 | 2024-06-01</p>
+<p>环境：Ubuntu 22.04 | 2024-06-01</p>
 </blockquote>
-<h3 id="_2">基础配置</h3>
+<h2 id="_2">版本</h2>
+<table>
+<thead>
+<tr>
+<th>组件</th>
+<th>版本</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Git</td>
+<td>2.43.0</td>
+<td>系统仓库</td>
+</tr>
+<tr>
+<td>OpenSSH</td>
+<td>9.6p1</td>
+<td>系统仓库</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">基础配置</h2>
 <pre><code class="language-bash">git config --global user.name &quot;Your Name&quot;
 git config --global user.email &quot;your@email.com&quot;
 
@@ -849,7 +893,7 @@ ssh-add ~/.ssh/id_ed25519
 # 复制公钥添加到 GitHub Settings → SSH Keys
 cat ~/.ssh/id_ed25519.pub
 </code></pre>
-<h3 id="_3">踩坑</h3>
+<h3 id="_4">踩坑</h3>
 <h4 id="1-git-push-permission-denied-publickey">1. <code>git push</code> 提示 <code>Permission denied (publickey)</code></h4>
 <ul>
 <li><strong>现象</strong>：<code>git@github.com: Permission denied (publickey)</code></li>
@@ -862,7 +906,7 @@ cat ~/.ssh/id_ed25519.pub
 <li><strong>原因</strong>：本机时间同步未开启</li>
 <li><strong>解决</strong>：<code>sudo timedatectl set-ntp true</code></li>
 </ul>
-<h3 id="_4">参考链接</h3>
+<h3 id="_5">参考链接</h3>
 <ul>
 <li><a href="https://git-scm.com/doc">Git 官方文档</a></li>
 <li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">GitHub SSH 配置</a></li>
