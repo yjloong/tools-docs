@@ -349,6 +349,45 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
+        文件位置
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="文件位置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        放置规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        注册导航
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
         分类规则
       
     </span>
@@ -760,6 +799,45 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
+        文件位置
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="文件位置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        放置规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        注册导航
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
         分类规则
       
     </span>
@@ -859,7 +937,37 @@ apt install docker...
 
 要注意版本兼容性。
 </code></pre>
-<h2 id="_6">分类规则</h2>
+<h2 id="_6">文件位置</h2>
+<p>项目根目录：<code>/home/ailab/tools_docs</code></p>
+<pre><code>/home/ailab/tools_docs/
+├── mkdocs.yml              # 导航配置
+└── docs/
+    ├── guide.md            # 本文档
+    ├── template.md         # 模板
+    ├── &lt;分类&gt;/             # 已存在的分类目录
+    │   └── index.md
+    └── &lt;分类&gt;/             # 新建分类目录
+        └── &lt;文件名&gt;.md
+</code></pre>
+<h3 id="_7">放置规则</h3>
+<ol>
+<li><strong>新建文档</strong> → <code>docs/&lt;分类&gt;/&lt;文件名&gt;.md</code></li>
+<li>分类目录不存在则新建</li>
+<li>文件名用英文小写 + 连字符，如 <code>offline-pip-source.md</code></li>
+<li><strong>单篇追加</strong> → 在已有分类的 <code>index.md</code> 中追加 <code>##</code> 二级标题段落</li>
+<li><strong>新建分类</strong> → 创建 <code>docs/&lt;新分类&gt;/index.md</code>，并在 <code>mkdocs.yml</code> 的 <code>nav</code> 中添加</li>
+</ol>
+<h3 id="_8">注册导航</h3>
+<p>新增文档后必须更新 <code>/home/ailab/tools_docs/mkdocs.yml</code>：</p>
+<pre><code class="language-yaml">nav:
+  - 首页: index.md
+  - 已有分类: docker/index.md
+  - 新分类: 新分类/index.md      # 添加这行
+  - 已有分类:
+      - 概览: docker/index.md
+      - 具体文档: docker/xxx.md   # 子文档这样加
+</code></pre>
+<h2 id="_9">分类规则</h2>
 <ul>
 <li>内容涉及搭建离线源 → <code>pip/apt/docker/npm/...</code></li>
 <li>内容涉及环境迁移 → 按目标环境分类</li>
